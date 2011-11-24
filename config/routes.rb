@@ -1,5 +1,9 @@
 MicroBlog::Application.routes.draw do
+  get "sessions/new"
+
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+  
   get "users/new"
 
   match '/contact', :to => 'pages#contact'
@@ -7,6 +11,8 @@ MicroBlog::Application.routes.draw do
   match '/help',    :to => 'pages#help'
   
   match '/signup', :to => 'users#new'
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
   
   root :to => 'pages#home'
   # The priority is based upon order of creation:
