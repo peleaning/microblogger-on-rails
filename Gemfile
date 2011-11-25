@@ -5,7 +5,6 @@ gem 'rails', '3.1.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
 
 gem 'gravatar_image_tag', '1.0.0.pre2'
 
@@ -23,11 +22,11 @@ end
 
 group :development do
 	gem 'faker', '0.3.1'
+	gem 'sqlite3'
 end
 
 group :production do
-	gem 'heroku'
-	gem 'therubyracer-heroku', '0.8.1.pre3' 
+	gem 'pg'
 end
 gem 'jquery-rails'
 
