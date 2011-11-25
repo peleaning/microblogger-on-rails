@@ -25,6 +25,9 @@ group :development do
 	gem 'faker', '0.3.1'
 end
 
+group :production do
+	gem 'therubyracer-heroku', '0.8.1.pre3' 
+end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
