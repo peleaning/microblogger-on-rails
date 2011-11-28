@@ -9,7 +9,7 @@ module ApplicationHelper
 	end
 	
 	def logo
-		image_tag("logo.png", :alt => "Sample App", :class => "round")
+		image_tag("logo1.png", :alt => "Sample App", :class => "round")
 	end
 	
 	def gravatar_for(user, options = { :size => 50 } )
